@@ -39,6 +39,16 @@ public class Main {
 	}
 	
 	public static boolean checkAnswer(int answer) {
+		count ++; //실행 횟수
+		if(answer != randomNumber) { // 답이 아닐 시
+			if(answer>randomNumber) { 
+				max = answer;
+			}else if(answer<randomNumber){
+				min = answer;
+			}
+			
+			return false;
+		}
 		return true;
 	}
 }
